@@ -1,0 +1,32 @@
+body{
+  background-image:url(../img/fondo.jpg);
+}
+
+#tablero{
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  border: 15px;
+  border-style: ridge;
+  border-color: #61380B;
+  border-collapse: collapse;
+}
+
+td{
+  width: 70px;
+  height: 70px;
+  border-style: solid;
+  border-color: #848484;
+}
+
+/* Pinta las casillas */
+/* Negras */
+
+tr:nth-child(even) td:nth-child(odd) , tr:nth-child(odd) td:nth-child(even){
+    background-color: black;
+}
+
+/* Blancas */
+tr:nth-child(even) td:nth-child(even) , tr:nth-child(odd) td:nth-child(odd){
+    background-color: white;
+}
