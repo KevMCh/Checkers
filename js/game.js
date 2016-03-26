@@ -9,11 +9,13 @@ whiteOrBlack = 0;
 /*                                                        GAME                                                                                      */
 /****************************************************************************************************************************************************/
 
-function Game (whiteT, blackT, tableP){
-  this.white = whiteT;
-  this.black = blackT;
+function Game (){
 
-  this.table = tableP;
+  this.white = new Team();
+  this.black = new Team();
+
+  this.table = new Table();
+  this.table.setPieces(this.white, this.black);
 };
 
 Game.prototype.move = function move(row, colum){
@@ -259,9 +261,7 @@ function Piece (){
 /*                                                        PLAY                                                                                      */
 /****************************************************************************************************************************************************/
 
-
-w = new Team();
-b = new Team();
-t = new Table();
-t.setPieces(w, b);
-game = new Game(w, b, t);
+function newPlay(){
+  game = new Game();
+  console.log("Nuevo juego")
+}

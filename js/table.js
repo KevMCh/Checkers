@@ -1,6 +1,8 @@
 
 function play(){
 
+  newPlay();
+
   var divW = "<div class=\"piece white\"> </div>";
   var divB = "<div class=\"piece black\"> </div>";
 
@@ -53,4 +55,5 @@ function reset(){
   }
   //Las colocamos de nuevo
   play();
+  newPlay();
 }
